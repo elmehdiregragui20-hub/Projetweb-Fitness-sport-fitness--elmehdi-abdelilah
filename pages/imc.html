@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Comprenez l'indice de masse corporelle, son usage indicatif et ses limites.">
+  <title>Comprendre l'IMC — FitLife</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="../index.html" aria-label="FitLife, accueil">Fit<span>Life</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+        <span class="menu-toggle-label">Menu</span>
+        <span class="menu-toggle-icon" aria-hidden="true"></span>
+      </button>
+      <nav class="navigation" id="main-navigation" aria-label="Navigation principale">
+        <a href="../index.html">Accueil</a>
+        <a href="programmes.html">Programmes</a>
+        <a href="conseils.html">Conseils</a>
+        <a class="active" href="imc.html" aria-current="page">IMC</a>
+        <a href="apropos.html">À propos</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Un indicateur parmi d'autres</p>
+        <h1>Comprendre l'IMC</h1>
+        <p>L'indice de masse corporelle est un repère statistique général. Il ne résume pas à lui seul l'état de santé ou la forme physique d'une personne.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container narrow-copy">
+        <h2>Qu'est-ce que l'IMC&nbsp;?</h2>
+        <p>L'IMC met en relation le poids et la taille d'une personne. Il est utilisé comme indicateur à l'échelle d'une population, mais ne tient pas compte de nombreux facteurs individuels, comme la composition corporelle, l'âge ou certaines situations de santé.</p>
+        <div class="notice">
+          <h2>À retenir</h2>
+          <p>Cette page est informative et ne remplace pas un avis médical. Pour interpréter un indicateur de santé ou obtenir des conseils adaptés à votre situation, consultez un professionnel de santé.</p>
+        </div>
+      </div>
+    </section>
+<section class="section imc-section">
+    <div class="container narrow-copy">
+        <h2>Calculateur d'IMC</h2>
+        <p>Entrez votre poids et votre taille pour calculer votre IMC.</p>
+
+        <form id="imc-form">
+            <label for="poids">Votre poids (kg)</label>
+            <input type="number" id="poids"
+                   min="1" max="500" step="0.1" required>
+
+            <label for="taille">Votre taille (cm)</label>
+            <input type="number" id="taille"
+                   min="50" max="250" step="0.1" required>
+
+            <button type="submit">Calculer mon IMC</button>
+        </form>
+
+        <p id="resultat-imc" aria-live="polite"></p>
+        <p class="imc-note">
+            Résultat indicatif pour les adultes.
+            L'IMC ne constitue pas un diagnostic médical.
+        </p>
+    </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <a class="brand" href="../index.html" aria-label="FitLife, accueil">Fit<span>Life</span></a>
+      <p>Le sport à votre rythme. Prenez soin de vous.</p>
+      <small>© 2026 FitLife. Tous droits réservés.</small>
+    </div>
+  </footer>
+</body>
+</html>
