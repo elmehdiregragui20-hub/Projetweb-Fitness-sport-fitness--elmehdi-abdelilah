@@ -42,7 +42,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const tailleM = tailleCm / 100;
         const imc = poids / (tailleM * tailleM);
 
-        resultat.textContent = "Votre IMC est de " + imc.toFixed(1);
+        let message = "";
+
+if (imc >= 30) {
+  message = " — Cet IMC correspond à la catégorie obésité chez l’adulte.";
+} else if (imc >= 25) {
+  message = " — Cet IMC correspond à un surpoids chez l’adulte.";
+}
+
+resultat.textContent = "Votre IMC est de " + imc.toFixed(1) + message;
     });
 });
 
