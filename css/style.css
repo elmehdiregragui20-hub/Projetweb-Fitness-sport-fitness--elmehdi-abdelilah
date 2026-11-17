@@ -90,7 +90,7 @@ button:focus-visible {
   color: var(--color-accent);
 }
 
-.js .menu-toggle {
+.menu-toggle {
   display: none;
 }
 
@@ -352,7 +352,7 @@ h3 {
     padding-block: 14px;
   }
 
-  .menu-toggle {
+  .js .menu-toggle {
     display: inline-flex;
     min-height: 42px;
     align-items: center;
@@ -554,3 +554,5 @@ h3 {
 .feature-card[hidden] {
     display: none;
 }
+
+input:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }

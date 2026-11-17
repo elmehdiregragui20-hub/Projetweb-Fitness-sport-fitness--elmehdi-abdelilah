@@ -13,7 +13,7 @@ if (menuToggle && navigation) {
   });
 
   navigation.addEventListener("click", (event) => {
-    if (event.target instanceof HTMLAnchorElement) {
+    if (event.target instanceof Element && event.target.closest("a")) {
       menuToggle.setAttribute("aria-expanded", "false");
       navigation.classList.remove("is-open");
     }
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const tailleCm = Number(document.getElementById("taille").value);
         const resultat = document.getElementById("resultat-imc");
 
-        if (poids <= 0 || tailleCm <= 0) {
+        if (!Number.isFinite(poids) || !Number.isFinite(tailleCm) || poids < 1 || poids > 500 || tailleCm < 50 || tailleCm > 250) {
             resultat.textContent = "Veuillez saisir des valeurs valides.";
             return;
         }
@@ -67,9 +67,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
             boutons.forEach(function (btn) {
                 btn.classList.remove("actif");
+                btn.setAttribute("aria-pressed", "false");
             });
 
             bouton.classList.add("actif");
+            bouton.setAttribute("aria-pressed", "true");
 
             programmes.forEach(function (programme) {
                 if (niveau === "tous" ||

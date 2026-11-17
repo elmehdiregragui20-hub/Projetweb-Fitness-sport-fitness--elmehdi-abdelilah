@@ -38,19 +38,20 @@
         <h2>Choisissez votre niveau</h2>
         <div class="filtres">
             <button type="button" class="filtre-btn actif"
-                    data-filtre="tous">Tous</button>
+                    aria-pressed="true" data-filtre="tous">Tous</button>
             <button type="button" class="filtre-btn"
-                    data-filtre="debutant">Débutant</button>
+                    aria-pressed="false" data-filtre="debutant">Débutant</button>
             <button type="button" class="filtre-btn"
-                    data-filtre="intermediaire">Intermédiaire</button>
+                    aria-pressed="false" data-filtre="intermediaire">Intermédiaire</button>
             <button type="button" class="filtre-btn"
-                    data-filtre="avance">Avancé</button>
+                    aria-pressed="false" data-filtre="avance">Avancé</button>
         </div>
     </div>
 </section>
 
     <section class="section">
     
+<div class="container card-grid">
 <article class="feature-card" data-niveau="debutant">
     <span class="card-number" aria-hidden="true">01</span>
     <h2>Reprendre en douceur</h2>
@@ -83,8 +84,8 @@
     <div class="container footer-content">
       <a class="brand" href="../index.html" aria-label="FitLife, accueil">Fit<span>Life</span></a>
       <nav aria-label="Navigation de bas de page">
-  <a href="index.html">Accueil</a>
-  <a href="pages/apropos.html">À propos</a>
+  <a href="../index.html">Accueil</a>
+  <a href="apropos.html">À propos</a>
 </nav>
       <small>© 2026 FitLife. Tous droits réservés.</small>
     </div>
